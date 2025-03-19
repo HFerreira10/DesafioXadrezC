@@ -1,5 +1,14 @@
 #include <stdio.h>
 
+void movimentoBispo(char *labelBispo[]){   
+    int pecaBispo = 1;
+
+    while (pecaBispo <= 5) {
+        printf("%s\n", labelBispo);
+        pecaBispo++;
+    }   
+}
+
 int main() {
     int pecaXadrez = 0, movimento;
     char nome[40];
@@ -26,22 +35,22 @@ int main() {
 
             switch (movimento) {
                 case 1:
-                    for (int Torre = 1; Torre <= 5; Torre++) {
+                    for (int Torre = 1; Torre <= 5; Torre++) {                        
                         printf("Cima \n");
                     }
                     break;
                 case 2:
-                    for (int Torre = 1; Torre <= 5; Torre++) {
+                    for (int Torre = 1; Torre <= 5; Torre++) {                        
                         printf("Baixo \n");
                     }
                     break;
                 case 3:
-                    for (int Torre = 1; Torre <= 5; Torre++) {
+                    for (int Torre = 1; Torre <= 5; Torre++) {                        
                         printf("Direita \n");
                     }
                     break;
                 case 4:
-                    for (int Torre = 1; Torre <= 5; Torre++) {
+                    for (int Torre = 1; Torre <= 5; Torre++) {                        
                         printf("Esquerda \n");
                     }
                     break;
@@ -60,12 +69,16 @@ int main() {
             scanf("%d", &movimento);
 
             int Bispo = 1; // Variável de controle para o while
+            char labelBispo[20] = "";
+
             switch (movimento) {
                 case 1:
-                    while (Bispo <= 5) {
+                    *labelBispo = "Cima direita";
+                    movimentoBispo(labelBispo);
+                    /*while (Bispo <= 5) {
                         printf("Cima, Direita \n");
                         Bispo++;
-                    }
+                    }*/
                     break;
                 case 2:
                     while (Bispo <= 5) {
