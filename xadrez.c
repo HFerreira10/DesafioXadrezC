@@ -1,12 +1,7 @@
 #include <stdio.h>
 
-void movimentoBispo(char *labelBispo[]){   
-    int pecaBispo = 1;
-
-    while (pecaBispo <= 5) {
-        printf("%s\n", labelBispo);
-        pecaBispo++;
-    }   
+void imprimeTexto(char texto[40]) {
+    printf("%s\n", texto);
 }
 
 int main() {
@@ -35,27 +30,27 @@ int main() {
 
             switch (movimento) {
                 case 1:
-                    for (int Torre = 1; Torre <= 5; Torre++) {                        
-                        printf("Cima \n");
-                    }
+                    for (int Torre = 1; Torre <= 5; Torre++) {                                                
+                        imprimeTexto("Cima");
+                    }                   
                     break;
                 case 2:
-                    for (int Torre = 1; Torre <= 5; Torre++) {                        
-                        printf("Baixo \n");
+                    for (int Torre = 1; Torre <= 5; Torre++) {                                                
+                        imprimeTexto("Baixo");
                     }
                     break;
                 case 3:
-                    for (int Torre = 1; Torre <= 5; Torre++) {                        
-                        printf("Direita \n");
+                    for (int Torre = 1; Torre <= 5; Torre++) {                                                
+                        imprimeTexto("Direita");
                     }
                     break;
                 case 4:
-                    for (int Torre = 1; Torre <= 5; Torre++) {                        
-                        printf("Esquerda \n");
+                    for (int Torre = 1; Torre <= 5; Torre++) {                                                
+                        imprimeTexto("Direita");
                     }
                     break;
                 default:
-                    printf("Opção Inválida \n");
+                    imprimeTexto("Opção não disponível");                    
                     break;
             }
             break;
@@ -73,33 +68,31 @@ int main() {
 
             switch (movimento) {
                 case 1:
-                    *labelBispo = "Cima direita";
-                    movimentoBispo(labelBispo);
-                    /*while (Bispo <= 5) {
-                        printf("Cima, Direita \n");
+                    while (Bispo <= 5) {
+                        imprimeTexto("Cima, Direita");                        
                         Bispo++;
-                    }*/
+                    }
                     break;
                 case 2:
                     while (Bispo <= 5) {
-                        printf("Cima, Esquerda \n");
+                        imprimeTexto("Cima, Esquerda");                        
                         Bispo++;
                     }
                     break;
                 case 3:
                     while (Bispo <= 5) {
-                        printf("Baixo, Direita \n");
+                        imprimeTexto("Cima, Direita");                        
                         Bispo++;
                     }
                     break;
                 case 4:
                     while (Bispo <= 5) {
-                        printf("Baixo, Esquerda \n");
+                        imprimeTexto("Cima, Esquerda");                        
                         Bispo++;
                     }
                     break;
                 default:
-                    printf("Opção Inválida \n");
+                    imprimeTexto("Opção não disponível");
                     break;
             }
             break;
@@ -115,31 +108,31 @@ int main() {
             int Rainha = 1; // Variável de controle para o do-while
             switch (movimento) {
                 case 1:
-                    do {
-                        printf("Esquerda \n");
+                    do {                        
+                        imprimeTexto("Esquerda"); 
                         Rainha++;
                     } while (Rainha <= 8);
                     break;
                 case 2:
                     do {
-                        printf("Direita \n");
+                        imprimeTexto("Direita");                         
                         Rainha++;
                     } while (Rainha <= 8);
                     break;
                 case 3:
                     do {
-                        printf("Cima \n");
+                        imprimeTexto("Cima");                         
                         Rainha++;
                     } while (Rainha <= 8);
                     break;
                 case 4:
                     do {
-                        printf("Baixo \n");
+                        imprimeTexto("Baixo");                         
                         Rainha++;
                     } while (Rainha <= 8);
                     break;
                 default:
-                    printf("Opção Inválida \n");
+                    imprimeTexto("Opção não disponível");
                     break;
             }
             break;
@@ -154,51 +147,51 @@ int main() {
             int Cavalo = 1; // Variável de controle para o do-while
             switch (movimento) {
                 case 1:
-                    for (int i = 1; i <= 2; i++) {
-                        printf("Cima \n");
+                    for (int i = 1; i <= 2; i++) {                        
+                        imprimeTexto("Cima");    
                     }
                     do {
-                        printf("Direita \n");
+                        imprimeTexto("Direita");                        
                         Cavalo++;
                     } while (Cavalo <= 1);
                     break;
                 case 2:
                     for (int i = 1; i <= 2; i++) {
-                        printf("Cima \n");
+                        imprimeTexto("Cima");                        
                     }
                     Cavalo = 1;
                     do {
-                        printf("Esquerda \n");
+                        imprimeTexto("Esquerda");                        
                         Cavalo++;
                     } while (Cavalo <= 1);
                     break;
                 case 3:
                     for (int i = 1; i <= 2; i++) {
-                        printf("Baixo \n");
+                        imprimeTexto("Baixo");                        
                     }
                     Cavalo = 1;
                     do {
-                        printf("Direita \n");
+                        imprimeTexto("Direita");                        
                         Cavalo++;
                     } while (Cavalo <= 1);
                     break;
                 case 4:
                     for (int i = 1; i <= 2; i++) {
-                        printf("Baixo \n");
+                        imprimeTexto("Baixo");                        
                     }
                     Cavalo = 1;
                     do {
-                        printf("Esquerda \n");
+                        imprimeTexto("Esquerda");                          
                         Cavalo++;
                     } while (Cavalo <= 1);
                     break;
                 default:
-                    printf("Opção Inválida \n");
+                    imprimeTexto("Opção não disponível");
                     break;
             }
             break; // Break adicionado para evitar cair no "default"
         default:
-            printf("Opção Inválida \n");
+            imprimeTexto("Opção não disponível");
             break;
     }
 
