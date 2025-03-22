@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//Implementação da função para impressão do texto
+//O parâmetro será o texto que deverá ser impresso
 void imprimeTexto(char texto[40]) {
     printf("%s\n", texto);
 }
@@ -55,7 +57,7 @@ int main() {
             }
             break;
 
-        case 2: // Bispo (usando while)
+        case 2: // A peça Bispo irá utilizar o comando while
             printf("Move-se na diagonal. Escolha a direção do movimento:\n");
             printf("1 - Diagonal Superior Direita; \n");
             printf("2 - Diagonal Superior Esquerda; \n");
@@ -63,7 +65,7 @@ int main() {
             printf("4 - Diagonal Inferior Esquerda; \n");
             scanf("%d", &movimento);
 
-            int Bispo = 1; // Variável de controle para o while
+            int Bispo = 1; // Controle para o while
             char labelBispo[20] = "";
 
             switch (movimento) {
@@ -97,7 +99,7 @@ int main() {
             }
             break;
 
-        case 3: // Rainha (usando do-while)
+        case 3: // A peça Rainha irá utilizar o comando Do while
             printf("Move-se em todas as direções. Escolha a direção do movimento:\n");
             printf("1 - Esquerda; \n");
             printf("2 - Direita; \n");
@@ -105,7 +107,7 @@ int main() {
             printf("4 - Baixo; \n");
             scanf("%d", &movimento);
 
-            int Rainha = 1; // Variável de controle para o do-while
+            int Rainha = 1; // Controle Do While
             switch (movimento) {
                 case 1:
                     do {                        
@@ -136,7 +138,7 @@ int main() {
                     break;
             }
             break;
-        case 4: // Cavalo
+        case 4: // A peça Cavalo irá utilizar o comando For e Do While
             printf("Move-se em L (duas casas em uma direção e uma casa em outra). Escolha a direção do movimento:\n");
             printf("1 - Cima Direita; \n");
             printf("2 - Cima Esquerda; \n");
@@ -144,7 +146,7 @@ int main() {
             printf("4 - Baixo Esquerda; \n");
             scanf("%d", &movimento);
 
-            int Cavalo = 1; // Variável de controle para o do-while
+            int Cavalo = 1; // Controle o Do while
             switch (movimento) {
                 case 1:
                     for (int i = 1; i <= 2; i++) {                        
@@ -189,7 +191,7 @@ int main() {
                     imprimeTexto("Opção não disponível");
                     break;
             }
-            break; // Break adicionado para evitar cair no "default"
+            break; // Implementação do break
         default:
             imprimeTexto("Opção não disponível");
             break;
